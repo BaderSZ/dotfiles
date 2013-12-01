@@ -1,10 +1,9 @@
 URxvt*font: xft:DejaVu Sans Mono:pixelsize=12:antialias=true:hinting=true
-!URxvt.font: xft:inconsolata:pixelsize=11:antialias=true
 URxvt.scrollBar: false
 
 ! Transparent background
 URxvt*depth: 32
-URxvt*background: rgba:0000/0000/0000/8888
+URxvt*background: rgba:0000/0000/0000/aaaa
 
 ! Clickable URLs
 URxvt.perl-ext-common:  default,matcher
