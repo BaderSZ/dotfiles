@@ -21,6 +21,7 @@ end
 
 -- Startup
 awful.util.spawn_with_shell("compton")
+--awful.util.spawn_with_shell("bash ~/.wallpaper/wallpaper.sh")
 
 -- Handle runtime errors after startup
 do
@@ -43,7 +44,7 @@ end
 beautiful.init("/usr/share/awesome/themes/default/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
-terminal = "x-terminal-emulator"
+terminal = "urxvt-unicode"
 editor = os.getenv("EDITOR") or "editor"
 editor_cmd = terminal .. " -e " .. editor
 
@@ -57,29 +58,34 @@ modkey = "Mod4"
 -- Table of layouts to cover with awful.layout.inc, order matters.
 layouts =
 {
-    awful.layout.suit.floating,
-    awful.layout.suit.tile,
+    awful.layout.suit.floating, --1
+    awful.layout.suit.tile, --2
     --awful.layout.suit.tile.left,
     --awful.layout.suit.tile.bottom,
     --awful.layout.suit.tile.top,
-    awful.layout.suit.fair,
+    awful.layout.suit.fair, --3
     --awful.layout.suit.fair.horizontal,
-    awful.layout.suit.spiral,
+    --awful.layout.suit.spiral,
     --awful.layout.suit.spiral.dwindle,
-    awful.layout.suit.max,
-    --awful.layout.suit.max.fullscreen,
+    awful.layout.suit.max, --4
+    awful.layout.suit.max.fullscreen, --5
     --awful.layout.suit.magnifier
 }
 -- }}}
 
+
 -- {{{ Tags
--- Define a tag table which hold all screen tags.
-tags = {}
-for s = 1, screen.count() do
-    -- Each screen has its own tag table.
-    tags[s] = awful.tag({ 1, 2, 3, 4, 5, 6 }, s, layouts[1])
-end
--- }}}
+ tags = {
+   names  = { "α", "β", "γ", "δ", "ε", "ζ"},
+   layout = { layouts[1], layouts[2], layouts[5], layouts[3], layouts[1],
+              layouts[1]
+             }
+        }
+ 
+ for s = 1, screen.count() do
+     tags[s] = awful.tag(tags.names, s, tags.layout)
+ end
+ -- }}}
 
 -- {{{ Menu
 -- Create a laucher widget and a main menu
@@ -337,10 +343,16 @@ awful.rules.rules = {
                      keys = clientkeys,
                      buttons = clientbuttons } },
 -- Rule for transparency
+--    { rule = {class = "Firefox"},
+--      properties = {opacity = 0.8} },
+    { rule = { class = "Firefox" },
+      properties = { tag = tags[1][1] } }, 
+    { rule = { class = "Sublime" },
+      properties = { tag = tags[1][3] } }, 
     { rule = {class = "Zathura"}, 
-      properties = {opacity = 0.8} },
-    { rule = { class = "Vlc" },
-      properties = { floating = true } },
+      properties = {opacity = 0.75} },
+  --  { rule = { class = "Vlc" },
+  --  properties = { floating = true } },
     { rule = { class = "pinentry" },
       properties = { floating = true } },
     { rule = { class = "gimp" },
