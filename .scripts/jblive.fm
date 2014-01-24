@@ -1,0 +1,5 @@
+#!/bin/sh
+
+## JupiterBroadcasting audio feed
+
+cvlc http://jbradio.out.airtime.pro:8000/jbradio_a
