@@ -108,3 +108,10 @@ fi
 
 # colors the prompt, with the format "name@host current-folder". In the second line, the colors are "01;32" and "00;31"
 export PS1='\[\033[01;32m\]\u@\h \[\033[01;35m\]\W \$ \[\033[00m\]'
+
+##
+
+export EDITOR=vim
+
+echo "Welcome!, today is $(date +%Y-%m-%d)"
+echo ""
