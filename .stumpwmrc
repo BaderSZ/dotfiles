@@ -27,7 +27,7 @@
 (define-key *root-map* (kbd "C-t")
     "exec thunderbird")
 
-(define-key *rootmap* (kbd "C-r")
+(define-key *root-map* (kbd "C-r")
     "exec dmenu_run")
 
 
