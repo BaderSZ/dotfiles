@@ -22,7 +22,7 @@
     "exec gnome-terminal -e emacs")
 
 (define-key *root-map* (kbd "C-f")
-    "exec firefox-nightly")
+    "exec firefox")
 
 (define-key *root-map* (kbd "C-t")
     "exec thunderbird")
