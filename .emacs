@@ -31,6 +31,9 @@
 (setq inhibit-startup-echo-area-message "bader")
 ;; This is bound to f11 in Emacs
 ;; Who use the bar to scroll?
-(scroll-bar-mode 0)
-(tool-bar-mode 0)
+;(scroll-bar-mode 0)
+;(tool-bar-mode 0)
 
+(load "~/.emacs.d/lisp/nasm.el")
+(require 'nasm-mode)
+(add-to-list 'auto-mode-alist '("\\.\\(asm\\|s\\)$" . nasm-mode))
