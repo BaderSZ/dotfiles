@@ -19,10 +19,6 @@ if awesome.startup_errors then
                      text = awesome.startup_errors })
 end
 
--- Startup
-awful.util.spawn_with_shell("compton")
---awful.util.spawn_with_shell("bash ~/.wallpaper/wallpaper.sh")
-
 -- Handle runtime errors after startup
 do
     local in_error = false
@@ -41,11 +37,11 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, and wallpapers
-beautiful.init("/usr/share/awesome/themes/default/theme.lua")
+beautiful.init("/home/bader/.config/awesome/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
-terminal = "urxvt-unicode"
-editor = os.getenv("EDITOR") or "editor"
+terminal = "gnome-terminal"
+editor =  "vim"
 editor_cmd = terminal .. " -e " .. editor
 
 -- Default modkey.
@@ -58,34 +54,29 @@ modkey = "Mod4"
 -- Table of layouts to cover with awful.layout.inc, order matters.
 layouts =
 {
-    awful.layout.suit.floating, --1
-    awful.layout.suit.tile, --2
-    --awful.layout.suit.tile.left,
-    --awful.layout.suit.tile.bottom,
-    --awful.layout.suit.tile.top,
-    awful.layout.suit.fair, --3
-    --awful.layout.suit.fair.horizontal,
-    --awful.layout.suit.spiral,
-    --awful.layout.suit.spiral.dwindle,
-    awful.layout.suit.max, --4
-    awful.layout.suit.max.fullscreen, --5
-    --awful.layout.suit.magnifier
+    awful.layout.suit.floating,
+    awful.layout.suit.tile,
+    awful.layout.suit.tile.left,
+    awful.layout.suit.tile.bottom,
+    awful.layout.suit.tile.top,
+    awful.layout.suit.fair,
+    awful.layout.suit.fair.horizontal,
+    awful.layout.suit.spiral,
+    awful.layout.suit.spiral.dwindle,
+    awful.layout.suit.max,
+    awful.layout.suit.max.fullscreen,
+    awful.layout.suit.magnifier
 }
 -- }}}
 
-
 -- {{{ Tags
- tags = {
-   names  = { "α", "β", "γ", "δ", "ε", "ζ"},
-   layout = { layouts[1], layouts[2], layouts[5], layouts[3], layouts[1],
-              layouts[1]
-             }
-        }
- 
- for s = 1, screen.count() do
-     tags[s] = awful.tag(tags.names, s, tags.layout)
- end
- -- }}}
+-- Define a tag table which hold all screen tags.
+tags = {}
+for s = 1, screen.count() do
+    -- Each screen has its own tag table.
+    tags[s] = awful.tag({ "α", "β", "γ", "δ", "ε", "ζ", "η", "θ", "ι" }, s, layouts[2])
+end
+-- }}}
 
 -- {{{ Menu
 -- Create a laucher widget and a main menu
@@ -103,7 +94,7 @@ mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesom
                         })
 
 mylauncher = awful.widget.launcher({ image = image(beautiful.awesome_icon),
-                                     menu = mymainmenu })
+                                    menu = mymainmenu })
 -- }}}
 
 -- {{{ Wibox
@@ -252,6 +243,8 @@ globalkeys = awful.util.table.join(
 
     awful.key({ modkey, "Control" }, "n", awful.client.restore),
 
+    -- Custom --
+
     -- Prompt
     awful.key({ modkey },            "r",     function () mypromptbox[mouse.screen]:run() end),
 
@@ -342,21 +335,13 @@ awful.rules.rules = {
                      focus = true,
                      keys = clientkeys,
                      buttons = clientbuttons } },
--- Rule for transparency
---    { rule = {class = "Firefox"},
---      properties = {opacity = 0.8} },
-    { rule = { class = "Firefox" },
-      properties = { tag = tags[1][1] } }, 
-    { rule = { class = "Sublime" },
-      properties = { tag = tags[1][3] } }, 
-    { rule = {class = "Zathura"}, 
-      properties = {opacity = 0.75} },
-  --  { rule = { class = "Vlc" },
-  --  properties = { floating = true } },
     { rule = { class = "pinentry" },
       properties = { floating = true } },
-    { rule = { class = "gimp" },
-      properties = { floating = true } },
+    { rule = {class = "Zathura"}, 
+      properties = {opacity = 0.75} },
+--    -- Set Firefox to always map on tags number 2 of screen 1.
+--    { rule = { class = "Firefox" },
+--      properties = { tag = tags[1][2] } },
 }
 -- }}}
 
@@ -390,3 +375,16 @@ end)
 client.add_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.add_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
+
+
+-- Auto Startup
+--os.execute("run-once xbacklight -set 15")
+--os.execute("run-once gtk-redshift ")
+--os.execute("run-once wicd-gtk ")
+--os.execute("run-once pidgin ")
+--os.execute("run-once light-locker ")
+--os.execute("run-oncexfce4-power-manager")
+--os.execute("run-once syndaemon -d -i 1")
+--os.execute("run-once /opt/syncthing/syncthing ")
+--os.execute("run-once xbindkeys_autostart ")
+
