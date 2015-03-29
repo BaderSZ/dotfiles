@@ -376,15 +376,3 @@ client.add_signal("focus", function(c) c.border_color = beautiful.border_focus e
 client.add_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
 
-
--- Auto Startup
---os.execute("run-once xbacklight -set 15")
---os.execute("run-once gtk-redshift ")
---os.execute("run-once wicd-gtk ")
---os.execute("run-once pidgin ")
---os.execute("run-once light-locker ")
---os.execute("run-oncexfce4-power-manager")
---os.execute("run-once syndaemon -d -i 1")
---os.execute("run-once /opt/syncthing/syncthing ")
---os.execute("run-once xbindkeys_autostart ")
-
