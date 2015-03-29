@@ -30,6 +30,9 @@
 (define-key *root-map* (kbd "C-r")
     "exec dmenu_run")
 
+(define-key *root-map* (kbd "C-z")
+    "exec transmission-gtk")
+
 
 ;; Quit
 (define-key *root-map* (kbd "q")
