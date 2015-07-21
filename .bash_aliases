@@ -1,8 +1,6 @@
 ## alias file
 
 alias define="dict"
-alias morse='cw'
-alias handbrake='ghb'
 alias upgrade='sudo apt-get update && sudo apt-get upgrade'
 alias install='sudo apt-get install'
 alias encrypt='gpg -c'
@@ -12,6 +10,7 @@ alias octave-gui="octave --force-gui"
 
 alias nettest="ping 8.8.8.8 -c 3"
 alias IPs="nmap -sP 192.168.1.0-254"
+alias myip="curl ifconfig.me"
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -33,5 +32,3 @@ if [ -x /usr/bin/dircolors ]; then
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 fi
-
-alias wicd-wifi="wicd-cli --wireless"
