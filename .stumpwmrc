@@ -16,10 +16,10 @@
 
 ;; Application keybindings
 (define-key *root-map* (kbd "C-e")
-    "exec gnome-terminal -e emacs")
+    "exec xfce4-terminal -e emacs")
 
 (define-key *root-map* (kbd "e")
-    "exec gnome-terminal -e emacs")
+    "exec xfce4-terminal -e emacs")
 
 (define-key *root-map* (kbd "C-f")
     "exec firefox")
