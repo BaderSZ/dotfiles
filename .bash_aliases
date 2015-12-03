@@ -32,3 +32,6 @@ if [ -x /usr/bin/dircolors ]; then
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 fi
+
+alias dict-de="dict --database fd-deu-eng"
+alias dict-en="dict"
