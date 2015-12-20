@@ -1,20 +1,16 @@
 (in-package :stumpwm)
 
 ;; change the prefix key
-;; Note, this binding is made for a DE Mac keyboard
 ;; Change to preferred combination
-(set-prefix-key (kbd "C-<"))
+(set-prefix-key (kbd "C-/"))
 
 
 ;; Set wallpaper
-(run-shell-command "feh --bg-fill Pictures/Wallpaper/wallpaper-2938202.jpg")
-
-
-;; Start redshift
-(run-shell-command "redshift")
+;; (run-shell-command "feh --bg-fill Pictures/wallpaper.png")
 
 
 ;; Application keybindings
+
 (define-key *root-map* (kbd "C-e")
     "exec xfce4-terminal -e emacs")
 
@@ -22,17 +18,13 @@
     "exec xfce4-terminal -e emacs")
 
 (define-key *root-map* (kbd "C-f")
-    "exec firefox")
+    "exec iceweasel")
 
 (define-key *root-map* (kbd "C-t")
-    "exec thunderbird")
+    "exec icedove")
 
 (define-key *root-map* (kbd "C-r")
     "exec dmenu_run")
-
-(define-key *root-map* (kbd "C-z")
-    "exec transmission-gtk")
-
 
 ;; Quit
 (define-key *root-map* (kbd "q")
