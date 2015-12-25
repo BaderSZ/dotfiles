@@ -7,6 +7,8 @@ alias encrypt='gpg -c'
 alias decrypt='gpg'
 alias play="rvlc"
 alias octave-gui="octave --force-gui"
+alias qemu-start="qemu-system-x86_64 -enable-kvm -m 512"
+
 
 alias nettest="ping 8.8.8.8 -c 3"
 alias IPs="nmap -sP 192.168.1.0-254"
