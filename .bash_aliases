@@ -37,3 +37,7 @@ fi
 
 alias dict-de="dict --database fd-deu-eng"
 alias dict-en="dict"
+
+# wicd aliases
+alias wicd-scan="wicd-cli --wireless -Sl"
+alias wicd-connect="wicd-cli --wireless -cn"
