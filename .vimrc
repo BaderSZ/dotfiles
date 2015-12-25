@@ -68,3 +68,18 @@ inoremap [             []<Left>
 ""inoremap '             ''<Left>
 ""inoremap "             ""<Left>
 inoremap ,             ,<Space>
+
+set showcmd
+set cursorline
+filetype indent on
+set lazyredraw
+set hlsearch
+set foldenable          " enable folding
+set foldlevelstart=10   " open most folds by default
+set foldnestmax=10      " 10 nested fold max
+set backup
+set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set backupskip=/tmp/*,/private/tmp/*
+set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set writebackup
+~                 
