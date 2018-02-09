@@ -72,9 +72,7 @@ xterm*|rxvt*)
 esac
 
 # colored GCC warnings and errors
-#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
-
-# some more ls aliases
+export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -100,7 +98,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export PATH=$PATH:/sbin:/usr/sbin:$HOME/.scripts
+export PATH=$PATH:/sbin:/usr/sbin:$HOME/.scripts:$HOME/.gopath/
 
-export EDITOR=emacs
+export EDITOR=vim
 export PAGER=most

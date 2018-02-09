@@ -3,16 +3,24 @@
 alias define="dict"
 alias upgrade='sudo apt-get update && sudo apt-get upgrade'
 alias install='sudo apt-get install'
+
 alias encrypt='gpg -c'
 alias decrypt='gpg'
+
 alias play="rvlc"
 alias octave-gui="octave --force-gui"
 alias qemu-start="qemu-system-x86_64 -enable-kvm -m 512"
+alias convert-pdf="pdfunite"
 
+alias spin_down="udisksctl power-off -b"
 
 alias nettest="ping 8.8.8.8 -c 3"
 alias IPs="nmap -sP 192.168.1.0-254"
 alias myip="curl ifconfig.me"
+alias weather="curl wttr.in"
+
+
+alias latexbuild="pdflatex --output-format pdf"
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -39,5 +47,5 @@ alias dict-de="dict --database fd-deu-eng"
 alias dict-en="dict"
 
 # wicd aliases
-alias wicd-scan="wicd-cli --wireless -Sl"
-alias wicd-connect="wicd-cli --wireless -cn"
+#alias wicd-scan="wicd-cli --wireless -Sl"
+#alias wicd-connect="wicd-cli --wireless -cn"
