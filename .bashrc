@@ -98,7 +98,8 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export PATH=$PATH:/sbin:/usr/sbin:$HOME/.scripts:$HOME/.gopath/
+export PATH=$PATH:/sbin:/usr/sbin:$HOME/.local/bin/
+
 
 export EDITOR=vim
 export PAGER=most

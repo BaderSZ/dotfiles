@@ -3,30 +3,29 @@
 --    By Adrian C. (anrxc)   --
 -------------------------------
 
--- Alternative icon sets and widget icons:
---  * http://awesome.naquadah.org/wiki/Nice_Icons
-
 -- {{{ Main
-theme = {}
-theme.wallpaper_cmd = { "awsetbg /usr/share/awesome/themes/zenburn/zenburn-background.png" }
+local theme = {}
+theme.wallpaper = "/home/tanto/.config/awesome/thinkpad.jpg"
 -- }}}
 
 -- {{{ Styles
 theme.font      = "sans 8"
 
 -- {{{ Colors
-theme.fg_normal = "#DCDCCC"
-theme.fg_focus  = "#FFFFFF"
-theme.fg_urgent = "#FFA500"
-theme.bg_normal = "#3F3F3F"
-theme.bg_focus  = "#1E2320"
-theme.bg_urgent = "#3F3F3F"
+theme.fg_normal  = "#DCDCCC"
+theme.fg_focus   = "#F0DFAF"
+theme.fg_urgent  = "#CC9393"
+theme.bg_normal  = "#3F3F3F"
+theme.bg_focus   = "#1E2320"
+theme.bg_urgent  = "#3F3F3F"
+theme.bg_systray = theme.bg_normal
 -- }}}
 
 -- {{{ Borders
-theme.border_width  = "2"
+theme.useless_gap   = 0
+theme.border_width  = 2
 theme.border_normal = "#3F3F3F"
-theme.border_focus  = "#FFFFF0"
+theme.border_focus  = "#6F6F6F"
 theme.border_marked = "#CC9393"
 -- }}}
 
@@ -65,8 +64,8 @@ theme.mouse_finder_color = "#CC9393"
 -- Variables set for theming the menu:
 -- menu_[bg|fg]_[normal|focus]
 -- menu_[border_color|border_width]
-theme.menu_height = "15"
-theme.menu_width  = "100"
+theme.menu_height = 15
+theme.menu_width  = 100
 -- }}}
 
 -- {{{ Icons
@@ -79,7 +78,6 @@ theme.taglist_squares_unsel = "/usr/share/awesome/themes/zenburn/taglist/squarez
 -- {{{ Misc
 theme.awesome_icon           = "/usr/share/awesome/themes/zenburn/awesome-icon.png"
 theme.menu_submenu_icon      = "/usr/share/awesome/themes/default/submenu.png"
-theme.tasklist_floating_icon = "/usr/share/awesome/themes/default/tasklist/floatingw.png"
 -- }}}
 
 -- {{{ Layout
@@ -95,11 +93,18 @@ theme.layout_max        = "/usr/share/awesome/themes/zenburn/layouts/max.png"
 theme.layout_fullscreen = "/usr/share/awesome/themes/zenburn/layouts/fullscreen.png"
 theme.layout_magnifier  = "/usr/share/awesome/themes/zenburn/layouts/magnifier.png"
 theme.layout_floating   = "/usr/share/awesome/themes/zenburn/layouts/floating.png"
+theme.layout_cornernw   = "/usr/share/awesome/themes/zenburn/layouts/cornernw.png"
+theme.layout_cornerne   = "/usr/share/awesome/themes/zenburn/layouts/cornerne.png"
+theme.layout_cornersw   = "/usr/share/awesome/themes/zenburn/layouts/cornersw.png"
+theme.layout_cornerse   = "/usr/share/awesome/themes/zenburn/layouts/cornerse.png"
 -- }}}
 
 -- {{{ Titlebar
 theme.titlebar_close_button_focus  = "/usr/share/awesome/themes/zenburn/titlebar/close_focus.png"
 theme.titlebar_close_button_normal = "/usr/share/awesome/themes/zenburn/titlebar/close_normal.png"
+
+theme.titlebar_minimize_button_normal = "/usr/share/awesome/themes/default/titlebar/minimize_normal.png"
+theme.titlebar_minimize_button_focus  = "/usr/share/awesome/themes/default/titlebar/minimize_focus.png"
 
 theme.titlebar_ontop_button_focus_active  = "/usr/share/awesome/themes/zenburn/titlebar/ontop_focus_active.png"
 theme.titlebar_ontop_button_normal_active = "/usr/share/awesome/themes/zenburn/titlebar/ontop_normal_active.png"
@@ -124,3 +129,5 @@ theme.titlebar_maximized_button_normal_inactive = "/usr/share/awesome/themes/zen
 -- }}}
 
 return theme
+
+-- vim: filetype=lua:expandtab:shiftwidth=4:tabstop=8:softtabstop=4:textwidth=80

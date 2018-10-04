@@ -1,13 +1,6 @@
 Current setup:
 
-HP 14-r100nia
-Debian 9.3 Stretch
-AwesomeWM v4.0
-vim 8.0.707
-pulseaudio 10.0
-
-The following are as of now unused and will not be maintained,  but left for the sake of demonstration:
-
-.emacs*
-.stump*
-.xmonad*
+Thinkpad x230
+CentOS 7.5
+AwesomeWM v3.5.1
+vim 7.4

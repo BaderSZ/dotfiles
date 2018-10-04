@@ -1,16 +1,9 @@
-## alias file
-
-alias define="dict"
-alias upgrade='sudo apt-get update && sudo apt-get upgrade'
-alias install='sudo apt-get install'
-
 alias encrypt='gpg -c'
 alias decrypt='gpg'
 
-alias play="rvlc"
+alias play="mpv"
 alias octave-gui="octave --force-gui"
 alias qemu-start="qemu-system-x86_64 -enable-kvm -m 512"
-alias convert-pdf="pdfunite"
 
 alias spin_down="udisksctl power-off -b"
 
@@ -46,6 +39,5 @@ fi
 alias dict-de="dict --database fd-deu-eng"
 alias dict-en="dict"
 
-# wicd aliases
-#alias wicd-scan="wicd-cli --wireless -Sl"
-#alias wicd-connect="wicd-cli --wireless -cn"
+## CentOS specific 
+alias use-gcc-7="scl enable devtoolset-7 bash"

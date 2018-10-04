@@ -1,7 +1,0 @@
-#!/bin/sh
-
-# Auto setup or secondary monitor
-# sends output to secondary screen in 1080p
-
-xrandr --output DP1 --mode 1920x1080 --left-of eDP1
-

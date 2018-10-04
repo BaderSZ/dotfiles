@@ -33,42 +33,48 @@
 #keystate_scrolllock = enable
 #keystate_capslock = enable
 
-
+## Thinkpad X230 setup
 
 #Mute
 "pactl set-sink-mute 0 toggle"
     m:0x0 + c:121
     XF86AudioMute 
 
-#Vol Down
-"pactl set-sink-volume alsa_output.pci-0000_00_1b.0.analog-stereo -5%"
+#Vol--
+"pactl set-sink-volume 0 -10%"
     m:0x0 + c:122
     XF86AudioLowerVolume 
 
-#Vol Up
-"pactl set-sink-volume alsa_output.pci-0000_00_1b.0.analog-stereo +5%"
+#Vol++ 
+"pactl set-sink-volume 0 +10%"
     m:0x0 + c:123
     XF86AudioRaiseVolume 
 
-#screenshot
-"scrot"
-    m:0x0 + c:107
-    Print 
+#MicMute
+"pactl set-source-mute 1 toggle"
+    m:0x0 + c:198
+    XF86AudioMicMute 
 
-#Brightness Down
-"xbacklight -5"
+#LockScreen
+"xscreensaver-command -lock"
+    m:0x0 + c:160
+    XF86ScreenSaver 
+
+#Brightness--
+"xbacklight -10"
     m:0x0 + c:232
     XF86MonBrightnessDown 
 
-#Brightness Up
-"xbacklight +5"
+#Brightness++
+"xbacklight +10"
     m:0x0 + c:233
     XF86MonBrightnessUp 
 
-#Remark
-"Command"
-    m:0x40 + c:133
-    Mod4 + Super_L 
+"scrot -e 'mv $f ~/Pictures/Screenshots'"
+    m:0x0 + c:107
+    Print
 
-#
-# End of xbindkeys configuration
+"xscreensaver-command -lock"
+    m:0x0 + c:156
+    XF86Launch1
+
