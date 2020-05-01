@@ -1,6 +1,10 @@
 Current setup:
 
-Thinkpad x230
-CentOS 7.5
-AwesomeWM v3.5.1
-vim 7.4
+Thinkpad x230 (i5-3320M | 8GB DDR3)
+Fedora 31
+AwesomeWM v4.3
+alacritty 0.4.2
+vim 8.2
+
+RStudio 1.2.5033
+VSCode 1.44.2
